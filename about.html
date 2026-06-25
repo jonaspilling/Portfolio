@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Jonas Pilling | Über mich</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="images/favicon-fallback.png">
+    
+    <link rel="icon" href="images/favicon-schwarz.png" media="(prefers-color-scheme: light)">
+    
+    <link rel="icon" href="images/favicon-weiß.png" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">JONAS.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projekte.html">Projektübersicht</a></li>
+            <li><a href="about.html">Über mich</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-hero parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1555952517-2e8e729e0b44?q=80&w=2000&auto=format&fit=crop');">
+        
+        <div class="about-overlay">
+            <div class="about-content reveal">
+                
+                <h1 class="custom-title">Jonas Pilling.</h1>
+                
+                <p class="bio-text">
+                    Informatik & Design Student im 2. Semester in München.<br><br>
+                    Mein Fokus liegt genau an der Schnittstelle zwischen sauberer Logik und starkem visuellen Design. Ob Python und Flask im Backend, oder Adobe Suite und TouchDesigner im Visuellen – ich baue und gestalte Systeme, die nicht nur technisch funktionieren, sondern auch ästhetisch überzeugen.
+                </p>
+                
+                <div class="skills-container">
+                    <div class="skill-column">
+                        <h3>Tech & Code</h3>
+                        <ul>
+                            <li>Python & Flask</li>
+                            <li>HTML / CSS / JS</li>
+                            <li>Git & Pytest</li>
+                        </ul>
+                    </div>
+                    <div class="skill-column">
+                        <h3>Design & Tools</h3>
+                        <ul>
+                            <li>Illustrator & Photoshop</li>
+                            <li>Figma (UI/UX)</li>
+                            <li>TouchDesigner & Procreate</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="mailto:deine-email@example.com" class="btn about-btn">Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const scrollObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.15 
+        });
+
+        revealElements.forEach(el => scrollObserver.observe(el));
+    </script>
+</body>
+</html>

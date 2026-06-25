@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Jonas | Progress / Decay</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="images/favicon-fallback.png">
+    
+    <link rel="icon" href="images/favicon-schwarz.png" media="(prefers-color-scheme: light)">
+    
+    <link rel="icon" href="images/favicon-weiß.png" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">JONAS.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projekte.html">Projektübersicht</a></li>
+            <li><a href="about.html">Über mich</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Bereich für das spezifische Thema -->
+    <header class="detail-hero parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1506744626753-1fa30fd30dc7?q=80&w=2000&auto=format&fit=crop');">
+        <div class="theme-overlay">
+            <h1>Progress / Decay</h1>
+        </div>
+    </header>
+
+    <!-- Info-Sektion (Das Konzept & Die Tools) -->
+    <section class="detail-info reveal">
+        <div class="info-text">
+            <h2>Die Kuration.</h2>
+            <p>
+                In dieser Woche der Challenge lag der Fokus auf dem Übergang zwischen Aufbau und Verfall. 
+                Wie lässt sich der exakte Moment visualisieren, in dem aus Struktur Chaos wird?<br><br>
+                Die linke Seite der Serie fokussiert sich auf geometrische Präzision und Klarheit (Progress), 
+                während die rechte Seite organische, zerstörerische Texturen nutzt, um den Verfall (Decay) darzustellen.
+            </p>
+        </div>
+        <div class="info-tools">
+            <h2>Werkzeuge</h2>
+            <ul>
+                <li>Adobe Illustrator (Vektoren)</li>
+                <li>Adobe Photoshop (Texturen)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Große Galerie -->
+    <section class="detail-gallery">
+        <!-- Bild 1 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/placeholder.jpg" alt="Progress - Bild 1">
+            <p class="image-caption">01 — Geometrische Grundstruktur</p>
+        </div>
+        
+        <!-- Bild 2 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/placeholder.jpg" alt="Decay - Bild 2">
+            <p class="image-caption">02 — Beginnender Textur-Verfall</p>
+        </div>
+
+        <!-- Bild 3 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/placeholder.jpg" alt="Decay - Bild 3">
+            <p class="image-caption">03 — Vollständige Auflösung</p>
+        </div>
+    </section>
+
+    <!-- JavaScript für die Scroll-Effekte (identisch zu projekte.html) -->
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const scrollObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.15 
+        });
+
+        revealElements.forEach(el => scrollObserver.observe(el));
+    </script>
+</body>
+</html>

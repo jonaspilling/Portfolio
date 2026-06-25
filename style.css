@@ -13,6 +13,14 @@ body {
     overflow-x: hidden; 
 }
 
+/* --- Eigene Schriftarten laden --- */
+@font-face {
+    font-family: 'Ruigslay';
+    src: url('fonts/Ruigslay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* --- Navigation --- */
 .navbar {
     position: fixed;
@@ -28,8 +36,9 @@ body {
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-family: 'Ruigslay', sans-serif; /* Wendet deine neue Schriftart an */
+    font-size: 2rem; /* Hier kannst du die Größe anpassen, falls sie zu klein/groß ist */
+    font-weight: normal; /* Viele Custom-Fonts haben nur ein Gewicht, daher auf normal setzen */
     letter-spacing: 2px;
 }
 
@@ -137,4 +146,305 @@ body {
     font-weight: 300;
     letter-spacing: 5px;
     text-transform: uppercase;
+}
+
+/* --- Projektübersicht --- */
+.work-section {
+    padding: 120px 50px;
+    background-color: #0a0a0a; 
+    color: #ffffff;
+}
+
+.work-header {
+    margin-bottom: 100px;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 30px;
+}
+
+.work-header h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.work-header p {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* Container für jede der 5 Wochen */
+.category-block {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 150px; 
+}
+
+/* Die linke Spalte: Bleibt beim Scrollen kleben */
+.category-sidebar {
+    flex: 0 0 300px; 
+    position: sticky;
+    top: 120px; 
+    height: fit-content;
+}
+
+.category-sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+.category-sidebar span {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #888;
+}
+
+/* --- Styling für klickbare Kategorien (Detail-Link) --- */
+.detail-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.detail-link:hover {
+    transform: translateX(10px);
+    opacity: 0.7;
+}
+
+.link-arrow {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 3px;
+}
+
+/* Das Grid für die 6 Bilder (3 Spalten, 2 Reihen) */
+.image-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    aspect-ratio: 4 / 5; 
+    background-color: #1a1a1a;
+    overflow: hidden; 
+    position: relative;
+    cursor: pointer;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
+    filter: grayscale(100%); 
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+/* --- Scroll Reveal Animation --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px); 
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* --- Neuer Button für die Projektübersicht --- */
+.detail-btn {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    padding: 10px 20px;
+}
+
+/* --- Styling für die Detailseite (detail.html) --- */
+
+/* Hero-Bereich (etwas niedriger als auf der Startseite) */
+.detail-hero {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.detail-hero h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Text-Bereich unter dem Header */
+.detail-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 100px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.info-text {
+    flex: 2;
+}
+
+.info-text h2, .info-tools h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.info-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.info-tools {
+    flex: 1;
+    border-left: 1px solid #333333;
+    padding-left: 50px;
+}
+
+.info-tools ul {
+    list-style: none;
+}
+
+.info-tools li {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 10px;
+}
+
+/* Die großen Bilder */
+.detail-gallery {
+    padding: 0 50px 150px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Viel Platz zwischen den großen Bildern */
+}
+
+.large-image-wrapper {
+    width: 100%;
+}
+
+.large-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Sorgt dafür, dass die Bilder nicht abgeschnitten werden */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Leichter Schatten für Tiefe */
+}
+
+.image-caption {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* --- Styling für die Über mich Seite (about.html) --- */
+
+.about-hero {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Extra dunkles Overlay, damit der Text auf deinem Foto gut lesbar ist */
+.about-overlay {
+    background: rgba(10, 10, 10, 0.75); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    padding: 0 40px;
+}
+
+/* Wendet deine Ruigslay-Schrift auf die Hauptüberschrift an */
+.custom-title {
+    font-family: 'Ruigslay', sans-serif;
+    font-size: 5rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.bio-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 50px;
+}
+
+/* --- Skills Layout --- */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+.skill-column h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 10px;
+}
+
+.skill-column ul {
+    list-style: none;
+    text-align: left;
+}
+
+.skill-column li {
+    font-size: 1.1rem;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.about-btn {
+    margin-top: 20px;
 }
