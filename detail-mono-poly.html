@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Jonas | Mono / Poly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <link rel="icon" href="images/favicon-fallback.png">
-    
     <link rel="icon" href="images/favicon-schwarz.png" media="(prefers-color-scheme: light)">
-    
     <link rel="icon" href="images/favicon-weiß.png" media="(prefers-color-scheme: dark)">
 </head>
 <body>
@@ -23,8 +24,8 @@
         </ul>
     </nav>
 
-    <!-- Hero Bereich für das spezifische Thema -->
-    <header class="detail-hero parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1506744626753-1fa30fd30dc7?q=80&w=2000&auto=format&fit=crop');">
+    <!-- Hero Bereich -->
+    <header class="detail-hero parallax-bg" style="background-image: url('images/Mono - Poly/Background.png');">
         <div class="theme-overlay">
             <h1>Mono / Poly</h1>
         </div>
@@ -35,43 +36,60 @@
         <div class="info-text">
             <h2>Die Kuration.</h2>
             <p>
-                In dieser Woche der Challenge lag der Fokus auf dem Übergang zwischen Aufbau und Verfall. 
-                Wie lässt sich der exakte Moment visualisieren, in dem aus Struktur Chaos wird?<br><br>
-                Die linke Seite der Serie fokussiert sich auf geometrische Präzision und Klarheit (Progress), 
-                während die rechte Seite organische, zerstörerische Texturen nutzt, um den Verfall (Decay) darzustellen.
+                In dieser Woche der Challenge lag der Fokus auf dem Kontrast zwischen dem Einzelnen (Mono) und dem Vielfältigen (Poly). Wie verändert sich die visuelle Wahrnehmung, wenn man eine simple Grundform in eine vielschichtige Struktur aufbricht?<br><br>
+                Die Serie untersucht diesen Bruch konsequent in drei Disziplinen: Geometrische Grundkörper, typografische Uniformität und reduzierte Linienführungen werden dekonstruiert und in komplexe, mehrfarbige oder verzerrte Gebilde transformiert.
             </p>
         </div>
         <div class="info-tools">
             <h2>Werkzeuge</h2>
             <ul>
-                <li>Adobe Illustrator (Vektoren)</li>
-                <li>Adobe Photoshop (Texturen)</li>
+                <li>Adobe Illustrator (Vektoren & Typografie)</li>
             </ul>
         </div>
     </section>
 
     <!-- Große Galerie -->
     <section class="detail-gallery">
+        
         <!-- Bild 1 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Progress - Bild 1">
-            <p class="image-caption">01 — Geometrische Grundstruktur</p>
+            <img src="images/mono - poly/1.jpg" alt="Mono Poly - Kreise Schwarzweiß">
+            <p class="image-caption">01 — Form (Monochrom): Vom simplen Kreis zur komplexen Schnittmengen-Struktur.</p>
         </div>
         
         <!-- Bild 2 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Decay - Bild 2">
-            <p class="image-caption">02 — Beginnender Textur-Verfall</p>
+            <img src="images/mono - poly/2.jpg" alt="Mono Poly - Kreise Farbe">
+            <p class="image-caption">02 — Form (Farbe): Die Erweiterung der Vektor-Struktur durch ein lebendiges Farbspektrum.</p>
         </div>
 
         <!-- Bild 3 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Decay - Bild 3">
-            <p class="image-caption">03 — Vollständige Auflösung</p>
+            <img src="images/mono - poly/3.jpg" alt="Mono Poly - Typografie Mix">
+            <p class="image-caption">03 — Typografie (Struktur): Strikte Uniformität vs. chaotischer Font- und Farb-Mix.</p>
         </div>
+
+        <!-- Bild 4 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/mono - poly/4.jpg" alt="Mono Poly - Typografie Verlauf">
+            <p class="image-caption">04 — Typografie (Fläche): Die Formgebung des Wortes durch einen dynamischen Verlauf.</p>
+        </div>
+
+        <!-- Bild 5 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/mono - poly/5.jpg" alt="Mono Poly - Linien Mesh">
+            <p class="image-caption">05 — Linienführung: Zwei simple Pfade transformieren sich zu einem dreidimensionalen Wellen-Mesh.</p>
+        </div>
+
+        <!-- Bild 6 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/mono - poly/6.jpg" alt="Mono Poly - Barcode Verzerrung">
+            <p class="image-caption">06 — Verzerrung: Die Eskalation der Form in einen abstrahierten, fehlerhaften Barcode.</p>
+        </div>
+
     </section>
 
-    <!-- JavaScript für die Scroll-Effekte (identisch zu projekte.html) -->
+    <!-- JavaScript für die Scroll-Effekte -->
     <script>
         const revealElements = document.querySelectorAll('.reveal');
 

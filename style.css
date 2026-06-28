@@ -6,10 +6,12 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Neue Font mit Charakter */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300; /* Macht die Schrift schön leicht und edel */
+    
     color: #ffffff;
     background-color: #0a0a0a;
-    /* Da du Desktop-only willst, verhindern wir horizontales Scrollen strikt */
     overflow-x: hidden; 
 }
 
@@ -248,9 +250,7 @@ body {
 .grid-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
-    filter: grayscale(100%); 
+    object-fit: contain; /* <- Das ist der Fit-Effekt! */
 }
 
 .grid-item:hover img {
@@ -342,34 +342,42 @@ body {
     padding-bottom: 10px;
 }
 
-/* Die großen Bilder */
+/* --- Die großen Bilder (Listen-Layout Side-by-Side) --- */
 .detail-gallery {
     padding: 0 50px 150px 50px;
-    max-width: 1400px;
+    max-width: 1400px; /* Nutzt die volle Bildschirmbreite besser aus */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 100px; /* Viel Platz zwischen den großen Bildern */
+    gap: 150px; /* Richtig viel Raum zwischen den einzelnen Werken */
 }
 
 .large-image-wrapper {
+    display: flex;
+    align-items: center; /* Zentriert den Text vertikal exakt zur Mitte des Bildes */
+    justify-content: flex-start;
+    gap: 80px; /* Schöner, breiter Abstand zwischen Bild und Text */
     width: 100%;
 }
 
 .large-image-wrapper img {
     width: 100%;
+    max-width: 350px; /* Das ist der Trick: Das Bild wird jetzt niemals breiter als 350 Pixel! */
     height: auto;
-    object-fit: contain; /* Sorgt dafür, dass die Bilder nicht abgeschnitten werden */
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Leichter Schatten für Tiefe */
+    object-fit: contain; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
+    flex-shrink: 0; /* Verhindert, dass Flexbox das Bild komisch zusammenquetscht */
 }
 
 .image-caption {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #888888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: right;
+    flex: 1; /* Der Text schnappt sich jetzt flexibel den ganzen großen Rest (60%) */
+    margin-top: 0;
+    font-size: 1.5rem; /* Schriftgröße deutlich erhöht (vorher 1.2rem) */
+    line-height: 1.8;
+    color: #cccccc; 
+    text-transform: none; 
+    letter-spacing: 0.5px;
+    text-align: left; 
 }
 
 /* --- Styling für die Über mich Seite (about.html) --- */

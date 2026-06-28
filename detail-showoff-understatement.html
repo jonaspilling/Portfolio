@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Jonas | Show-off / Understatement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <link rel="icon" href="images/favicon-fallback.png">
-    
     <link rel="icon" href="images/favicon-schwarz.png" media="(prefers-color-scheme: light)">
-    
     <link rel="icon" href="images/favicon-weiß.png" media="(prefers-color-scheme: dark)">
 </head>
 <body>
@@ -23,8 +24,8 @@
         </ul>
     </nav>
 
-    <!-- Hero Bereich für das spezifische Thema -->
-    <header class="detail-hero parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1506744626753-1fa30fd30dc7?q=80&w=2000&auto=format&fit=crop');">
+    <!-- Hero Bereich -->
+    <header class="detail-hero parallax-bg" style="background-image: url('images/Show-off - Understatement/1.jpeg');">
         <div class="theme-overlay">
             <h1>Show-off / Understatement</h1>
         </div>
@@ -35,43 +36,61 @@
         <div class="info-text">
             <h2>Die Kuration.</h2>
             <p>
-                In dieser Woche der Challenge lag der Fokus auf dem Übergang zwischen Aufbau und Verfall. 
-                Wie lässt sich der exakte Moment visualisieren, in dem aus Struktur Chaos wird?<br><br>
-                Die linke Seite der Serie fokussiert sich auf geometrische Präzision und Klarheit (Progress), 
-                während die rechte Seite organische, zerstörerische Texturen nutzt, um den Verfall (Decay) darzustellen.
+                In dieser Woche wurde der Kontrast auf die Spitze getrieben – mit einem bewussten Augenzwinkern und der Hilfe von generativer KI. <br><br>
+                Die Serie spielt ganz gezielt mit überzogenem Kitsch und absurden Gegenüberstellungen, um den schmalen Grat zwischen absolutem Flex (Show-off) und maximaler Zurückhaltung (Understatement) zu visualisieren. Ob millionenschwerer Prunk in dreckigen Gassen oder glühende Magie im tiefsten Alltag: Es ist eine ironische Auseinandersetzung mit Status, Materialismus und der völlig überdrehten Ästhetik von KI-Kunst.
             </p>
         </div>
         <div class="info-tools">
             <h2>Werkzeuge</h2>
             <ul>
-                <li>Adobe Illustrator (Vektoren)</li>
-                <li>Adobe Photoshop (Texturen)</li>
+                <li>Google Gemini (Generative AI)</li>
+                <li>Prompt Engineering</li>
             </ul>
         </div>
     </section>
 
-    <!-- Große Galerie -->
+    <!-- Große Galerie im Listen-Layout -->
     <section class="detail-gallery">
+        
         <!-- Bild 1 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Progress - Bild 1">
-            <p class="image-caption">01 — Geometrische Grundstruktur</p>
+            <img src="images/show-off - understatement/1.jpg" alt="Show-off Understatement - Goldene Säule">
+            <p class="image-caption">01 — Der architektonische Flex: Purer goldener Barock-Prunk, völlig isoliert und deplatziert in der rohen, funktionalen Leere eines Betonbunkers.</p>
         </div>
         
         <!-- Bild 2 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Decay - Bild 2">
-            <p class="image-caption">02 — Beginnender Textur-Verfall</p>
+            <img src="images/show-off - understatement/2.jpg" alt="Show-off Understatement - Diamant Einkaufswagen">
+            <p class="image-caption">02 — Konsum-Kitsch: Ein banaler Einkaufswagen, komplett mit Diamanten besetzt, achtlos abgestellt im Müll einer dunklen, mit Graffiti besprühten Gasse.</p>
         </div>
 
         <!-- Bild 3 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Decay - Bild 3">
-            <p class="image-caption">03 — Vollständige Auflösung</p>
+            <img src="images/show-off - understatement/3.jpg" alt="Show-off Understatement - Beton Hypercar">
+            <p class="image-caption">03 — Tarnkappen-Wohlstand: Ein millionenschweres Hypercar, das sich durch seine rohe Beton-Optik perfekt an die graue, kühle Architektur anpasst. Understatement durch Materialwahl.</p>
         </div>
+
+        <!-- Bild 4 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/show-off - understatement/4.jpg" alt="Show-off Understatement - Bling Mantel">
+            <p class="image-caption">04 — Versteckter Prunk: Von außen ein abgenutzter, unscheinbarer Parka für Schietwetter – von innen pures, juwelenbesetztes Haute-Couture-Bling-Bling.</p>
+        </div>
+
+        <!-- Bild 5 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/show-off - understatement/5.jpg" alt="Show-off Understatement - Leuchtende Geode">
+            <p class="image-caption">05 — Innere Werte: Ein völlig gewöhnlicher, grauer Kieselstein am Strand, der in seinem Inneren einen absurd leuchtenden, magischen Kristall verbirgt.</p>
+        </div>
+
+        <!-- Bild 6 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/show-off - understatement/6.jpg" alt="Show-off Understatement - Magischer Fischer">
+            <p class="image-caption">06 — Beiläufige Magie: Ein rauer, bescheidener Seebär in einer schäbigen Hütte, aus dessen abgenutztem Ärmel völlig entspannt eine leuchtende Galaxie auf den Holztisch fließt.</p>
+        </div>
+
     </section>
 
-    <!-- JavaScript für die Scroll-Effekte (identisch zu projekte.html) -->
+    <!-- JavaScript für die Scroll-Effekte -->
     <script>
         const revealElements = document.querySelectorAll('.reveal');
 

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Jonas | Personal / Public</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <link rel="icon" href="images/favicon-fallback.png">
-    
     <link rel="icon" href="images/favicon-schwarz.png" media="(prefers-color-scheme: light)">
-    
     <link rel="icon" href="images/favicon-weiß.png" media="(prefers-color-scheme: dark)">
 </head>
 <body>
@@ -23,8 +24,8 @@
         </ul>
     </nav>
 
-    <!-- Hero Bereich für das spezifische Thema -->
-    <header class="detail-hero parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1506744626753-1fa30fd30dc7?q=80&w=2000&auto=format&fit=crop');">
+    <!-- Hero Bereich -->
+    <header class="detail-hero parallax-bg" style="background-image: url('images/Personal - Public/Background.png');">
         <div class="theme-overlay">
             <h1>Personal / Public</h1>
         </div>
@@ -35,43 +36,61 @@
         <div class="info-text">
             <h2>Die Kuration.</h2>
             <p>
-                In dieser Woche der Challenge lag der Fokus auf dem Übergang zwischen Aufbau und Verfall. 
-                Wie lässt sich der exakte Moment visualisieren, in dem aus Struktur Chaos wird?<br><br>
-                Die linke Seite der Serie fokussiert sich auf geometrische Präzision und Klarheit (Progress), 
-                während die rechte Seite organische, zerstörerische Texturen nutzt, um den Verfall (Decay) darzustellen.
+                Diese Serie untersucht die verschwimmenden Grenzen zwischen privatem Rückzugsraum und öffentlicher Sichtbarkeit durch die Linse digitaler Kartografierungsdienste. <br><br>
+                Mittels "Apple Maps Look Around" wird eine Form der digitalen Street Photography angewandt. Die Screenshots aus München und Frankfurt dokumentieren Momente, in denen das Persönliche, Intime oder auch Prekäre schonungslos im öffentlichen Raum – und damit auf den Servern von Tech-Giganten – eingefroren wird. Es ist ein Voyeurismus aus der Vogelperspektive, der die Frage stellt: Wem gehört der öffentliche Raum?
             </p>
         </div>
         <div class="info-tools">
             <h2>Werkzeuge</h2>
             <ul>
-                <li>Adobe Illustrator (Vektoren)</li>
-                <li>Adobe Photoshop (Texturen)</li>
+                <li>Apple Maps (Look Around)</li>
+                <li>Smartphone (Screenshots & Curation)</li>
             </ul>
         </div>
     </section>
 
-    <!-- Große Galerie -->
+    <!-- Große Galerie im Listen-Layout -->
     <section class="detail-gallery">
+        
         <!-- Bild 1 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Progress - Bild 1">
-            <p class="image-caption">01 — Geometrische Grundstruktur</p>
+            <img src="images/personal - public/1.jpg" alt="Personal Public - Drogeriemarkt München">
+            <p class="image-caption">01 — Öffentlicher Konsum: Der Eingangsbereich eines Drogeriemarktes in der Münchner Maxvorstadt. Ein durch und durch öffentlicher Raum, der alltägliche, oft sehr private Bedürfnisse bedient.</p>
         </div>
         
         <!-- Bild 2 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Decay - Bild 2">
-            <p class="image-caption">02 — Beginnender Textur-Verfall</p>
+            <img src="images/personal - public/2.jpg" alt="Personal Public - Bordell Frankfurt">
+            <p class="image-caption">02 — Intimität im Schaufenster: Ein Laufhaus an der Frankfurter Taunusstraße. Die absolute Kommerzialisierung und Zurschaustellung des Privaten im offenen Straßenbild.</p>
         </div>
 
         <!-- Bild 3 -->
         <div class="large-image-wrapper reveal">
-            <img src="images/placeholder.jpg" alt="Decay - Bild 3">
-            <p class="image-caption">03 — Vollständige Auflösung</p>
+            <img src="images/personal - public/3.jpg" alt="Personal Public - Leben auf der Straße">
+            <p class="image-caption">03 — Leben auf der Straße: Die Frankfurter Elbestraße. Wenn der öffentliche Gehweg mangels Alternativen zum privaten Wohn- und Rückzugsraum wird – unfreiwillig dokumentiert durch Kamera-Autos.</p>
         </div>
+
+        <!-- Bild 4 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/personal - public/4.jpg" alt="Personal Public - Urbanes Graffiti">
+            <p class="image-caption">04 — Urbane Markierung: Ein beklebtes und beschmiertes Verkehrsschild. Die illegale, persönliche Aneignung und Umdeutung von stark reglementiertem, öffentlichem Eigentum.</p>
+        </div>
+
+        <!-- Bild 5 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/personal - public/5.jpg" alt="Personal Public - Balkone München">
+            <p class="image-caption">05 — Die semi-private Zone: Eine Balkonfassade in München-Moosach. Der schmale, gläserne Grat zwischen dem geschützten Rückzugsort der Wohnung und der permanenten Präsentation nach außen.</p>
+        </div>
+
+        <!-- Bild 6 -->
+        <div class="large-image-wrapper reveal">
+            <img src="images/personal - public/6.jpg" alt="Personal Public - Isolation Moselstraße">
+            <p class="image-caption">06 — Isolation im Trubel: Ein weiterer dokumentierter Moment aus dem Frankfurter Bahnhofsviertel (Moselstraße), der die schonungslose Sichtbarkeit von persönlicher Not und Isolation aufzeigt.</p>
+        </div>
+
     </section>
 
-    <!-- JavaScript für die Scroll-Effekte (identisch zu projekte.html) -->
+    <!-- JavaScript für die Scroll-Effekte -->
     <script>
         const revealElements = document.querySelectorAll('.reveal');
 
